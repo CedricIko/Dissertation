@@ -1,3 +1,8 @@
 streamlit
 chess
 Pillow
+numpy
+torch
+tqdm
+python-chess
+pickle5
