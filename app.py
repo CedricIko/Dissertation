@@ -34,7 +34,7 @@ st.components.v1.html(render_svg(st.session_state.board), height=450)
 
 # AI move handling for Black AI start
 if len(st.session_state.move_log) == 0 and player_color == "Black": #and not st.session_state.awaiting_ai_move:
-    ai_move = find_best_move(st.session_state.board, depth=7)
+    ai_move = find_best_move(st.session_state.board, depth=3)
     if isinstance(ai_move, str):  # Check if the move is a string
         ai_move = chess.Move.from_uci(ai_move)  # Convert UCI string to Move object
     if ai_move and ai_move in st.session_state.board.legal_moves:
